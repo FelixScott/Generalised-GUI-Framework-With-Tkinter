@@ -29,6 +29,8 @@ def fUpdate():
 
 def fCreateButtonsMenu(fvButtonNames, fvButtonFunctions, fvContainerFrame):
    ButtonsMenuFrame = Frame(fvContainerFrame, bg=cElement1)
+   WidthFrame = Frame(ButtonsMenuFrame, bg=cElement1, width=1510, height=1)
+   WidthFrame.pack()
    i=0
    ButtonTitle = Label(ButtonsMenuFrame, text="Button Title", bg=cElement1, fg=cTextStandard)
    ButtonTitle.config(font=("Courier", 22))
@@ -113,11 +115,8 @@ def fCreateGUI(fvRoot):
    widgetFrame = Frame(bodyFrame, bg=cBackground, width=1500, height=1160)
 
    # create the widgets
-   buttonNameList = ["Button1", "Button2", "Button3 but it\n has a really long name", "Button4", "Button5", "Button6",
-                     "Button7", "Button8", "Button9", "Button10", "Button1", "Button2",
-                     "Button3 but it\n has a really long name", "Button4", "Button5"]
-   buttonFunctionList = [fBoop, fBoop, fBoop, fBoop, fBoop, fBoop, fBoop, fBoop, fBoop, fBoop, fBoop, fBoop, fBoop,
-                         fBoop, fBoop]
+   buttonNameList = ["Button1", "Button2", "Button3 but it\n has a really long name", "Button4", "Button5"]
+   buttonFunctionList = [fBoop, fBoop, fBoop, fBoop, fBoop]
    fCreateButtonsMenu(buttonNameList, buttonFunctionList, widgetFrame)
    fCreateSpace(widgetFrame)
    fCreateTextbox(widgetFrame)
@@ -128,7 +127,7 @@ def fCreateGUI(fvRoot):
 
 # GLOBAL VARIABLE DECLARATIONS
 
-gvReadoutText = ["Start1", "Start2", "Start3"]
+gvReadoutText = []
 gvReadoutWidget = None
 
 # colours
